@@ -1,18 +1,15 @@
 [Unit]
-Description=Small description of the service
-After=network.target
+Description=Simple paste app friendly with browser and command line
+Documentation=https://gitlab.com/ogarcia/lesma/-/blob/master/README.md
+Wants=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple
-User=__APP__
-Group=__APP__
-WorkingDirectory=__INSTALL_DIR__/
-ExecStart=__INSTALL_DIR__/script
-StandardOutput=append:/var/log/__APP__/__APP__.log
-StandardError=inherit
+DynamicUser=yes
+StateDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/lesma
 
-### Depending on specificities of your service/app, you may need to tweak these
-### .. but this should be a good baseline
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
 NoNewPrivileges=yes
