@@ -13,64 +13,64 @@
 # Listen address, default 127.0.0.1
 # Note that it is always better to put a web server like nginx in front
 # LESMA_ADDRESS
-#address = "127.0.0.1"
+address = "127.0.0.1"
 # Listen port, default 8000
 # LESMA_PORT
-#port = 8000
+port = __PORT__
 # When a new URL for a paste or file is generated use http or https, by
 # default is set to false and uses http
 # LESMA_HTTPS
-#https=true
+https=true
 # Valid domains when generating URLs for new pastes or files, by default is
 # set to ["localhost:8000", "127.0.0.1:8000"]
 # LESMA_DOMAINS
-#domains = [
-#  "localhost:8000",
-#  "127.0.0.1:8000",
-#  "lesma.eu"
-#]
+domains = [
+  "localhost:__PORT__",
+  "127.0.0.1:__PORT__",
+  "lesma.eu"
+]
 # Log level, the valid values are `critical`, `normal`, `debug`, `off`, if
 # not defined the default value is off
 # LESMA_LOG_LEVEL
-#log_level = "normal"
+log_level = "normal"
 # The text size limit sets the limit for the information posted as text,
 # default 1MiB. If you simply indicate a number the is in bytes but you can
 # use the suffixes kB, MB, GB.. for powers of ten or KiB, MiB, GiB.. for
 # powers of two
 # LESMA_TEXT_SIZE_LIMIT
-#text_size_limit = "100MiB"
+text_size_limit = "100MiB"
 # The binary size limit sets the limit for uploaded files, default 10MiB.
 # The size setting is made in the same way as for text_size_limit
 # LESMA_BINARY_SIZE_LIMIT
-#binary_size_limit = "5GiB"
+binary_size_limit = "5GiB"
 # Default download limit for every paste or file created with a plain client
 # like curl where a different value is not specified , default
 # 0 (unlimited), maximum accepted value 255
 # LESMA_DEFAULT_LIMIT_PLAIN
-#default_limit_plain = 1
+default_limit_plain = 1
 # Default download limit for every paste or file created with a browser like
 # Firefox where a different value is not specified , default 0 (unlimited),
 # maximum accepted value 255
 # LESMA_DEFAULT_LIMIT_BROWSER
-#default_limit_browser = 1
+default_limit_browser = 1
 # Default expiration time (in hours) for each paste or file created with
 # a plain client like curl when a different value is not specified, default
 # 720 hours (30 days)
 # LESMA_DEFAULT_EXPIRE_PLAIN
-#default_expire_plain = 48
+default_expire_plain = 48
 # Default expiration time (in hours) for each paste or file created with
 # a browser like Firefox when a different value is not specified, default
 # 24 hours
 # LESMA_DEFAULT_EXPIRE_BROWSER
-#default_expire_browser = 24
+default_expire_browser = 24
 # Maximum expiration time that an user can set (in hours) for each paste or
 # file, default 720 hours (30 days)
 # LESMA_MAX_EXPIRE
-#max_expire = 168
+max_expire = 168
 # Location of lesmas storage, if not defined, a temporary directory will be
 # used, usually /tmp
 # LESMA_STORAGE
-#storage = "__DATA_DIR__"
+storage = "__DATA_DIR__"
 
 # Production sample
 # Environment variable LESMA_PROFILE must be set to pro to load this profile
