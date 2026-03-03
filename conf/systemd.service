@@ -6,7 +6,8 @@ After=network-online.target
 
 [Service]
 Type=simple
-DynamicUser=yes
+User=__APP__
+Group=__APP__
 StateDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/lesma
 
